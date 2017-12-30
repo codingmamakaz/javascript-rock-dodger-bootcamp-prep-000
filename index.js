@@ -149,6 +149,9 @@ function moveDodgerLeft() {
     var left = parseInt(leftNumbers, 10);
 
     dodger.style.left = `${left - 4}px`;
+    if (top < 180) {
+      window.requestAnimationFrame(step)
+    }
   }
   window.requestAnimationFrame(e);
 });
